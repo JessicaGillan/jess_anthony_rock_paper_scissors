@@ -6,11 +6,11 @@ require 'jess_anthony_rock_paper_scissors/version'
 Gem::Specification.new do |spec|
   spec.name          = "jess_anthony_rock_paper_scissors"
   spec.version       = JessAnthonyRockPaperScissors::VERSION
-  spec.authors       = ["Jessica G"]
-  spec.email         = ["gillan.jessica@gmail.com"]
+  spec.authors       = ["Jessica G", "Anthony F"]
+  spec.email         = ["gillan.jessica@gmail.com", "anthony.c.fuentes@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{Play rock, paper, scissors}
+  # spec.description   = %q{TODO: Write a longer description or delete this line.}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
