@@ -1,3 +1,6 @@
 #!usr/local/bin/ruby
 
+require "jess_anthony_rock_paper_scissors"
+
+
 JessAnthonyRockPaperScissors::RockPaperScissors.new.play
