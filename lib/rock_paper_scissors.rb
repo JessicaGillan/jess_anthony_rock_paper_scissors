@@ -1,8 +1,8 @@
 class RockPaperScissors
 
   def initialize
-    @options = {"rock" => {lose: "paper", win: "scissors", value: "rock"}, 
-      "paper" => {lose: "scissors", win: "rock", value: "paper"}, 
+    @options = {"rock" => {lose: "paper", win: "scissors", value: "rock"},
+      "paper" => {lose: "scissors", win: "rock", value: "paper"},
       "scissors" => {lose: "rock", win: "paper", value: "scissors"}
     }
   end
@@ -19,11 +19,11 @@ class RockPaperScissors
       puts "Play with two players? (yes/no)"
       self.players = gets.chomp.downcase
     end until valid?(players)
-    @player1 = pick
+    self.player1 = pick
     if players == "yes"
-      @player2 = @options[pick]
-    else 
-      @player2 = computer
+      self.player2 = options[pick]
+    else
+      self.player2 = computer
     end
     compare
   end
@@ -43,24 +43,17 @@ class RockPaperScissors
   end
 
   def compare
-    if @player1 == @player2[:win]
-      puts "#{@player2[:value]} beats #{@player1}... Player 1 loses!"
-    elsif @player1 == @player2[:lose]
-      puts "#{@player1} beats #{@player2[:value]}... Player 1 wins!"
+    if player1 == player2[:win]
+      puts "#{ player2[:value] } beats #{ player1 }... Player 1 loses!"
+    elsif player1 == player2[:lose]
+      puts "#{ player1 } beats #{ player2[:value] }... Player 1 wins!"
     else
       puts "Tie Game"
       play
     end
   end
 
-  # protected
-  #   attr_accessor :players
-
-  private  
+  private
     attr_reader :options
-    attr_accessor :players
+    attr_accessor :players, :player1, :player2
 end
-
-RockPaperScissors.new.play
-
-
